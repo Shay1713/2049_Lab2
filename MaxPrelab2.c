@@ -17,9 +17,9 @@ void configButtons() {
 // 3.
 unsigned char buttonState() {
     unsigned char s1 = (P7IN & BIT0);
-    unsigned char s2 = (P3IN & BIT6) << 1;
-    unsigned char s3 = (P2IN & BIT2) << 2;
-    unsigned char s4 = (P7IN & BIT4) << 3;
+    unsigned char s2 = (P3IN & BIT6) >> 5;
+    unsigned char s3 = (P2IN & BIT2) << 1;
+    unsigned char s4 = (P7IN & BIT4);
     
     return s1 + s2 + s3 + s4;
 }
